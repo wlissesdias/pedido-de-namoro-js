@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aceita?</title>
+  <style>
+    body {
+      background-color: #ffc8dd;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    h1 {
+      color: #590d22;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    button {
+      padding: 10px 20px;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+      background-color: #ffb3c1;
+      transition: all 0.2s ease;
+    }
+    #nao {
+      position: absolute;
+    }
+  </style>
+</head>
+
+ 
+<body>
+  <h1>Quer namorar comigo?</h1>
+  <button id="sim">Sim</button>
+  <button id="nao">Não</button>
+
+  <script>
+    const btnSim = document.getElementById("sim");
+    const btnNao = document.getElementById("nao");
+
+    btnSim.onclick = () => {
+      alert("Eu te amo meu amor ❤️ Lanchinho mais tarde?");
+    };
+
+    btnNao.onmouseover = () => {
+      const largura = window.innerWidth - btnNao.offsetWidth;
+      const altura = window.innerHeight - btnNao.offsetHeight;
+      const randX = Math.floor(Math.random() * largura);
+      const randY = Math.floor(Math.random() * altura);
+      btnNao.style.left = `${randX}px`;
+      btnNao.style.top = `${randY}px`;
+    };
+  </script>
+</body>
+</html>
+
+
+
+
+
